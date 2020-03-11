@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>お問い合わせ</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header clearfix">
+      <a href="index.html">
+      <img src="./images/logo.png" class="logo_image">
+      </a>
+      <nav>
+        <ul class="top_menu clearfix">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="business.html">事業内容</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <img src="./images/contact.png" class="image_area">
+    <div class="wrapper clearfix">
+      <aside class="side_menu">
+      <nav>
+        <ul>
+          <li><a href="business.html">事業内容</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li class="point"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      </aside>
+      <form action="cgi-bin/formmail.cgi" method="post">
+        <table>
+          <tr>
+            <th class="name">お名前</th>
+            <td class="td"><input class="input" name="name" type="text"></td>
+          </tr>
+          <tr>
+            <th class="name">住所</th>
+            <td class="td"><input class="input" name="yourmail" type="text"></td>
+          </tr>
+          <tr>
+            <th class="name">性別</th>
+            <td class="td">
+                <input class="radio" type="radio" name="sex" value="male">男
+              　<input class="radio" type="radio" name="sex" value="female">女</td>
+          </tr>
+          <tr>
+            <th class="name">お問い合わせ内容</th>
+            <td class="td"><input class="textbox"  type="text"></td>
+          </tr>
+        </table>
+      </form>
+      <td>
+         <div id="input_wrap">
+         <input class="submit" type="submit" value="送信">
+       </div>
+     </td>
+  </div>
+    <footer class="footer">
+      <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

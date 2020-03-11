@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」 | cupOF Interests</title>
+
+<meta name="keywords" content="カップオブ,cupOF,Interests,IT,プログラミング,ガジェット,atom,browser-plus,plugin,ブラウザ" />
+<meta name="description" content="人気のテキストエディタ、ATOM本体にWebブラウザ機能を追加するプラグインbrowser-plusの紹介" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@2cadvanced">
+<meta property="og:title" content="ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」"/>
+<meta property="og:url" content="https://co.bsnws.net/article/97"/>
+<meta property="og:description" content="人気のテキストエディタ、ATOM本体にWebブラウザ機能を追加するプラグインbrowser-plusの紹介" />
+<meta property="og:image" content="https://img.bsnws.net/cupof/capture/app/app1/Q81Hvlz.jpg"/>
+
+<link rel="alternate" type="application/rss+xml" title="cupOF Interests RSSフィード"
+      href="/feed/rss2"/>
+
+<link rel="alternate" type="application/atom+xml"
+      title="Atom" href="/feed/atom"/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/img/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<link rel="stylesheet" href="/bundles/libCssBundle.css" />
+<link rel="stylesheet" href="/bundles/coreCssBundle.css" />
+
+<style media="screen">
+.g-bg-black-opacity-0_5--after::after {
+  background-color: rgba(255, 45, 36, 0.69) !important;
+}
+</style>
+</head>
+
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67586404-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7023076902942958",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <main>
+<header id="js-header"
+  class="u-header u-header--sticky-top u-header--toggle-section u-header--change-appearance"
+
+
+data-header-fix-moment="300">
+  <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10" data-header-fix-moment-exclude="g-py-10" data-header-fix-moment-classes="u-shadow-v18 g-py-0">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Responsive Toggle Button -->
+        <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+          <span class="hamburger hamburger--slider">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+          </span>
+          </span>
+        </button>
+        <!-- End Responsive Toggle Button -->
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand">
+          <img src="/img/itBlogLogo_11.png" alt="Image Description">
+        </a>
+        <!-- End Logo -->
+
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
+          <ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
+
+
+            <li class="nav-item g-mx-20--lg
+            ">
+              <a href="/category/1/IT%E3%83%BB%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88" class="nav-link px-0">
+                <i class="fa fa-info-circle"></i>
+                IT・ガジェット</a>
+            </li>
+
+
+            <li class="nav-item g-mx-20--lg
+              active
+            ">
+              <a href="/category/2/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" class="nav-link px-0">
+                <i class="fa fa-code"></i>
+                プログラミング</a>
+            </li>
+
+
+            <li class="nav-item g-mx-20--lg
+            ">
+              <a href="/category/3/PC%E3%83%BBMAC" class="nav-link px-0">
+                <i class="fa fa-desktop"></i>
+                PC・MAC</a>
+            </li>
+
+
+            <li class="nav-item g-mx-20--lg
+            ">
+              <a href="/category/4/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB" class="nav-link px-0">
+                <i class="fa fa-mobile"></i>
+                モバイル</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <!-- End Navigation -->
+      </div>
+    </nav>
+  </div>
+</header>
+    <br>
+<section class="dzsparallaxer auto-init height-is-based-on-content  mode-scroll" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+  <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_5--after " style="height: 140%; background-image: url('https://img.bsnws.net/cupof/capture/app/app1/Q81Hvlz.jpg'); transform: translate3d(0px, -204px, 0px);"></div>
+
+  <div class="container g-color-white g-py-130--md g-py-10">
+    <div class="row">
+      <div class="col-md-7 align-self-center g-mb-60 g-mb-0--md">
+
+          <h1 class="h1 g-font-weight-300 g-mb-20">ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」</h1>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+  <style media="screen">
+  #ariticle_content>p{font-size:1.21rem;color:#3E3E3E}.callout{padding:18px;margin:18px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px}.callout h2{margin-top:0;margin-bottom:0}.callout+.callout{margin-top:-5px}.callout-desc{border-left-color:#e74c3c;font-size:15px}.marker{background:linear-gradient(transparent 80%,#E67974 0)}
+  </style>
+
+  <section class="container g-pt-100 g-pb-40">
+    <div class="row ">
+      <div class="col-lg-1">
+
+        <div id="sharebuttons" class="js-sticky-block g-sticky-block--lg g-pt-60 " data-start-point="#sharebuttons" data-end-point="#stickyblock-end">
+          <a href="https://twitter.com/"
+          data-toggle="tooltip"
+          data-placement="right"
+          title="この記事をツイート"
+          onclick="popUp=window.open(
+                         'https://twitter.com/share?url=https://co.bsnws.net/s/JM&text=ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」 - cupOF Interests&hashtags=atom',
+                         'popupwindow',
+                         'scrollbars=yes,width=550,height=400');
+                         popUp.focus();
+                         return false">
+            <i class="fa fa-twitter fa-3x" style="color: #428bca"></i>
+          </a>
+
+          <a
+          data-toggle="tooltip"
+          data-placement="right"
+          title="この記事をFacebookでシェア"
+          onclick="popUp=window.open(
+                         'http://www.facebook.com/sharer/sharer.php?u=https://co.bsnws.net/article/97&title=ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」 - cupOF Interests',
+                         'popupwindow',
+                         'scrollbars=yes,width=550,height=400');
+                         popUp.focus();
+                         return false"
+          >
+            <i class="fa fa-facebook-official fa-3x" style="color: #3b5998"></i>
+          </a>
+          <a
+          href="https://plus.google.com/share?url=https://co.bsnws.net/article/97" target="_blank"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="この記事をGoogle+に投稿">
+            <i class="fa fa-google-plus-official fa-3x" style="color: #D23E34;"></i>
+
+          </a>
+          <a
+            href="http://getpocket.com/edit?url=https://co.bsnws.net/article/97"
+            target="_blank"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="この記事をPocketに追加"
+          >
+            <i class="fa fa-get-pocket" style="font-size : 270%; line-height: 1; color: #B50A1A"></i>
+          </a>
+
+          <a
+            data-toggle="tooltip"
+            data-placement="right"
+            title="この記事を はてなブックマーク に追加"
+            href='http://b.hatena.ne.jp/entry/https://co.bsnws.net/article/97'
+            hatena-bookmark-title="ATOMにWebブラウザ機能を追加するプラグイン「browser-plus」 - cupOF Interests"
+            target='_blank'
+            >
+            <i class="fa c-fa-hatenabookmark " style="color: #008fde; line-height: 1.2; font-size: 250%; margin-left: -7px;"></i>
+          </a>
+
+        </div>
+
+      </div> <!-- lg-1 -->
+
+      <div class="col-lg-8">
+
+        <time datetime="Wed Mar 16 2016 19:10:00 GMT+0900 (Japan Standard Time)" class="h6 g-color-blue"> <i class="fa fa-calendar"></i>
+          2016年 3月3日 19時10分
+          <i class="fa fa-history"></i>
+          3年前
+        </time>
+        <br><br>
+
+        <article id="ariticle_content">
+
+            <p>WebデザインやWebプログラミングをしている人はブラウザでの動作確認は必見です。</p>
+
+<p>デザインであればレイアウトが崩れていないか？Javascriptであればテストユニットを使う方法もありますが、DOMが絡んでくるのであれば思った通りの挙動をしているかどうか等。</p>
+
+<p>windowsであれば「<kbd>alt</kbd> + <kbd>tab</kbd>」、macであれば「<kbd>command</kbd> + <kbd>tab</kbd>」 のショートカットキーでアプリケーションを切り替える操作に慣れている人も多いのでないでしょうか。</p>
+
+<p>今回は人気のテキストエディタ、ATOMにWebブラウザプレビュー機能を追加するプラグイン「<strong>browser-plus</strong>」の紹介です。</p>
+
+<p><div class='text-center'><small><i> <strong>* browser-plusを動作させている画面</strong> </i></small></div><img alt="" class="img-responsive img-thumbnail center-block" src="https://img.bsnws.net/cupof/capture/app/app1/Q81Hvlz.jpg" /></p>
+
+<p>browser-plusは、<strong>ATOM本体にブラウザ( google chrome )が搭載されタブでブラウザを開いてくれるプラグインです</strong>。ATOMに搭載されるので、アプリケーションを切り替える手間が省けます。</p>
+
+<p><strong>browser-plusの対応している機能は以下に</strong></p>
+
+<p><small>1. ライブプレビュー ( ライブエディト )<br />
+2. 戻る/進むボタン<br />
+3. 開発ツール ( デバック用developerツール )<br />
+4. 画面の更新<br />
+5. 履歴<br />
+6. プレビュー<br />
+7. お気に入り (ブックマーク)</small></p>
+
+<p><br />
+<div class='callout callout-desc'><strong> browser-plusのインストール </strong></div></p>
+
+<p>インストールはSettingのinstallから&#39;<code><strong>browser-plus</strong></code>&#39;と入力して検索するか、コマンドラインからインストールする場合<span style="line-height: 20.8px;">は下記のコマンドでインストールできます。</span></p>
+
+<pre>
+<code class="language-bash">apm install browser-plus</code></pre>
+
+<p><br />
+<div class='callout callout-desc'><strong> browser-plusの使い方 </strong></div></p>
+
+<p>使い方も至って簡単でマウスを右クリックして&#39;<code><strong>Open browser-plus</strong></code>&#39;ボタンを押すか、&#39;<strong><kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>o</kbd></strong>&#39;のショートカットキーで起動します。</p>
+
+<p><div class='text-center'><small><i> <strong>* 起動直後はローカルとしてファイルが開かれます ( &nbsp;URLを入力してローカル以外のページも開けます&nbsp;)</strong> </i></small></div><img alt="" class="img-responsive img-thumbnail center-block" src="https://img.bsnws.net/cupof/capture/app/app1/er4I7Mj.jpg" /></p>
+
+<p><div class='text-center'><small><i> <strong>* お馴染みのDev Toolも搭載されているので、javascriptのデバッグも問題ありません</strong> </i></small></div><img alt="" class="img-responsive img-thumbnail center-block" src="https://img.bsnws.net/cupof/capture/app/app1/GhTRbCu.jpg" /></p>
+
+<p>その他にもURLバーにボタンが配置されていますが、「ブックマーク」や「Dev Tool起動」等、お馴染みの物ばかりなので直観的に使えると思います。</p>
+
+<p><small><strong>* <ins>実際に自身の環境で使ったデモ動画</ins></strong></small></p>
+<style type="text/css">.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+</style>
+<div class="embed-container"><iframe allowfullscreen="" frameborder="0" mozallowfullscreen="" src="https://player.vimeo.com/video/200107394" webkitallowfullscreen=""></iframe></div>
+
+<p><br />
+<div class='callout callout-desc'><strong> Summary </strong></div></p>
+
+<p>browser-plusはライブプレビュー機能が使えるので、ローカル環境でVagrantを使って開発してるフロントエンドデベロッパーにはピッタリのプラグインだと思います。</p>
+
+<p>「<strong>ブラウザ確認の度にアプリケーションを切り替えるのが面倒くさい！</strong>」なんて人には特にオススメ出来るので気になった方はチェックしてみてください！</p>
+
+<h3><a href="https://atom.io/packages/browser-plus" target="_blank"><ins><strong>ATOM : browser-plus</strong></ins>&nbsp;</a></h3>
+
+<p>&nbsp;</p>
+
+
+
+        </article>
+
+
+
+
+        <div id="article_info" class="text-center">
+
+          <div class="g-font-size-16">
+            <i class="fa fa-bookmark-o"></i> この記事のカテゴリ
+          </div>
+          <a class="btn btn-sm u-btn-outline-orange g-mr-10 g-mb-15" href="/category/2/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0"><i class="fa fa-code"></i> <strong>プログラミング</strong></a>
+
+          <br><br>
+
+          <div class="g-font-size-16">
+            <i class="fa fa-tags"></i> この記事に付けられているタグ</div>
+
+          <ul class="list-inline">
+            <li class="list-inline-item">
+            <a class="btn btn-md u-btn-inset u-btn-outline-lightred g-mr-10 g-mb-15" href="/tag/12/%E9%96%8B%E7%99%BA%E3%83%84%E3%83%BC%E3%83%AB"><strong>開発ツール</strong></a>
+            </li>
+            <li class="list-inline-item">
+            <a class="btn btn-sm u-btn-inset u-btn-outline-darkred g-mr-10 g-mb-15" href="/tag/17/Web%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3"><strong> Webデザイン</strong></a>
+          </li>
+
+            <li class="list-inline-item">
+            <a class="btn btn-sm u-btn-inset u-btn-outline-pink g-mr-10 g-mb-15" href="/tag/47/ATOM%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF"><strong>ATOMエディタ</strong></a>
+          </li>
+
+          </ul>
+
+        </div>
+        <br>
+
+
+        <section class="g-bg-secondary">
+          <br>
+
+        <div id="recommended">
+
+          <div class="g-font-size-16 text-center h5" style="color: #6e6c6c;"> <strong><i class="fa fa-cogs"></i> 関連する記事 </strong> </div>
+
+          <div class="row">
+
+          <div class="col-lg-4 g-mb-30 ">
+          <!-- Article -->
+          <article class="u-shadow-v1-4">
+            <a href="/article/210"><img class="img-fluid w-100" src="https://img.bsnws.net/cupof/logo/IT/NdeSWAh.jpg" alt="Image Description"></a>
+
+            <div class="g-bg-white g-pa-25">
+              <h3 class="h5 g-font-weight-300 g-mb-15">
+                <a class="u-link-v5 g-color-gray-dark-v2 g-color-primary--hover" href="/article/210">Atomで簡易httpサーバーを立ち上げられるプラグイン「atom-live-server」</a>
+              </h3>
+
+            </div>
+
+
+          </article>
+          <!-- End Article -->
+        </div>
+
+
+          <div class="col-lg-4 g-mb-30 ">
+          <!-- Article -->
+          <article class="u-shadow-v1-4">
+            <a href="/article/239"><img class="img-fluid w-100" src="https://img.bsnws.net/cupof/logo/IT/LG25CRG.jpg" alt="Image Description"></a>
+
+            <div class="g-bg-white g-pa-25">
+              <h3 class="h5 g-font-weight-300 g-mb-15">
+                <a class="u-link-v5 g-color-gray-dark-v2 g-color-primary--hover" href="/article/239">テスト用REST-APIサーバーをコマンド一発で！「json-server」</a>
+              </h3>
+
+            </div>
+
+
+          </article>
+          <!-- End Article -->
+        </div>
+
+
+          <div class="col-lg-4 g-mb-30 ">
+          <!-- Article -->
+          <article class="u-shadow-v1-4">
+            <a href="/article/279"><img class="img-fluid w-100" src="https://img.bsnws.net/cupof/logo/IT/c6hOnJr.jpg" alt="Image Description"></a>
+
+            <div class="g-bg-white g-pa-25">
+              <h3 class="h5 g-font-weight-300 g-mb-15">
+                <a class="u-link-v5 g-color-gray-dark-v2 g-color-primary--hover" href="/article/279">githubレポジトリのコードの変数をハイライトするブラウザプラグイン「octohint」</a>
+              </h3>
+
+            </div>
+
+
+          </article>
+          <!-- End Article -->
+        </div>
+
+
+
+          </div>
+
+        </div>
+      </section>
+    </div> <!-- col-lg-8 -->
+
+      <div class="col-lg-3">
+  <ul class="list-unstyled">
+  <li class="g-brd-around g-brd-gray-light-v4 g-pa-20 g-mb-7">
+    <div class="text-center">
+      <i class="fa fa-twitter fa-5x"></i>
+    </div>
+    <div class="text-center">
+      <span class="h6 g-font-weight-300 g-mb-20">
+      <div class="align-self-center">
+      <a class="btn u-btn-outline-bluegray g-brd-2 g-font-weight-600 g-rounded-3" href="https://twitter.com/2cadvanced" target="_blank">Twitter でフォローする</a>
+      </div>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<div class="text-center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- cupof-Long-responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7023076902942958"
+       data-ad-slot="9048650478"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<br>
+<div>
+  <div class="h6 text-center">
+    <strong>その他の運営サービス</strong>
+  </div>
+
+  <div class="g-brd-around g-brd-gray-light-v4 g-brd-2 g-brd-pink-left g-line-height-1_8 g-pa-10 g-mb-15" role="alert">
+
+    <a href="https://jrbt.pw/-/create" target="_blank">
+      <p class="h6 g-font-weight-400 g-mb-0 g-color-gray-dark-v4 g-font-style-normal g-font-size-13">ジャックラビット・ジョンソン</p>
+    </a>
+    <span class="u-label u-label--sm g-bg-lightred g-rounded-20 g-px-10">URL圧縮サービス</span>
+
+  </div>
+
+  <div class="g-brd-around g-brd-gray-light-v4 g-brd-2 g-brd-pink-left g-line-height-1_8 g-pa-10 g-mb-15" role="alert">
+
+    <a href="https://iuris.jp/" target="_blank">
+      <p class="h6 g-font-weight-400 g-mb-0 g-color-gray-dark-v4 g-font-style-normal g-font-size-13">イウリス</p>
+    </a>
+    <span class="u-label u-label--sm g-bg-lightred g-rounded-20 g-px-10">法律の検索、閲覧サービス　</span>
+
+  </div>
+</div>
+<br>
+<div>
+
+<div class="h6 text-center">
+  <strong><i class="fa fa-newspaper-o"></i> 最新の記事</strong>
+</div>
+<div>
+        <article class="u-block-hover g-bg-cover g-color-white g-bg-black-opacity-0_3--after text-center rounded">
+
+        <img class="w-100 u-block-hover__main--zoom-v1" src="https://img.bsnws.net/cupof/logo/IT/6Q19SxD.jpg" alt="Image Description">
+
+        <div class="u-block-hover__additional g-flex-middle g-z-index-2 g-brd-around g-brd-2 g-brd-white-opacity-0_3 g-pa-15 g-ma-20">
+                <div class="g-flex-middle-item">
+                <h3 class="h5 d-inline-block">
+                        <a class="g-color-white" href="/article/320" target="_blank">
+                              Atomで特定ファイルを外部アプリで開くプラグイン「open-unsupported-files」
+                              </a>
+                </h3>
+
+                </div>
+        </div>
+        </article>
+</div>
+<br>
+<div>
+        <article class="u-block-hover g-bg-cover g-color-white g-bg-black-opacity-0_3--after text-center rounded">
+
+        <img class="w-100 u-block-hover__main--zoom-v1" src="https://img.bsnws.net/cupof/logo/IT/kwJ3vPO.jpg" alt="Image Description">
+
+        <div class="u-block-hover__additional g-flex-middle g-z-index-2 g-brd-around g-brd-2 g-brd-white-opacity-0_3 g-pa-15 g-ma-20">
+                <div class="g-flex-middle-item">
+                <h3 class="h5 d-inline-block">
+                        <a class="g-color-white" href="/article/335" target="_blank">
+                              javascriptで和暦から西暦に変換する
+                              </a>
+                </h3>
+
+                </div>
+        </div>
+        </article>
+</div>
+<br>
+<div>
+        <article class="u-block-hover g-bg-cover g-color-white g-bg-black-opacity-0_3--after text-center rounded">
+
+        <img class="w-100 u-block-hover__main--zoom-v1" src="https://img.bsnws.net/cupof/logo/IT/A7nTpfW.jpg" alt="Image Description">
+
+        <div class="u-block-hover__additional g-flex-middle g-z-index-2 g-brd-around g-brd-2 g-brd-white-opacity-0_3 g-pa-15 g-ma-20">
+                <div class="g-flex-middle-item">
+                <h3 class="h5 d-inline-block">
+                        <a class="g-color-white" href="/article/332" target="_blank">
+                              catをより良くしたCLIツール「bat」
+                              </a>
+                </h3>
+
+                </div>
+        </div>
+        </article>
+</div>
+<br>
+
+</div>
+
+<div id="stickyblock-start" class="js-sticky-block g-sticky-block--lg g-pt-60" data-start-point="#stickyblock-start" data-end-point="#stickyblock-end">
+
+
+
+<div class="text-center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- cupof-responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7023076902942958"
+       data-ad-slot="3972003440"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</div>
+<br>
+
+</div>
+<br>
+
+      </div>
+
+    </div>
+    <div id="stickyblock-end"></div>
+
+  </section>
+
+
+      <section>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+        <div id="stickyblock-end"></div>
+<div class="text-center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7023076902942958"
+     data-ad-slot="9267825097"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<br>
+        </div>
+        <div class="col-lg-1"></div>
+      </div>
+      </section>
+
+
+<!-- Footer -->
+<footer class="g-bg-bluegray-lineargradient g-color-white-opacity-0_8 g-bg-img-hero g-pt-60">
+  <div class="container g-mb-60">
+    <div class="row">
+      <!-- Footer Content -->
+      <div class="col-lg-6 col-md-6 g-mb-40 g-mb-0--lg">
+
+
+        <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+          <h2 class="u-heading-v2__title h6 text-uppercase mb-0">More Info</h2>
+        </div>
+
+        <ul class="list-unstyled">
+          <li class="g-mb-5">
+            <i class="fa fa-angle-right g-mr-5"></i>
+            <a class="g-color-white-opacity-0_8" href="/contact">Contact</a>
+          </li>
+          <li class="g-mb-5">
+            <i class="fa fa-angle-right g-mr-5"></i>
+            <a class="g-color-white-opacity-0_8" href="https://twitter.com/2cadvanced" target="_blank">Twitter</a>
+          </li>
+          <li class="g-mb-5">
+            <i class="fa fa-angle-right g-mr-5"></i>
+            <a class="g-color-white-opacity-0_8" href="https://github.com/cupof-github" target="_blank">Github</a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- End Footer Content -->
+
+
+      <!-- Footer Content -->
+      <div class="col-lg-6 col-md-6 g-mb-40 g-mb-0--lg">
+
+
+        <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+          <h2 class="u-heading-v2__title h6 text-uppercase mb-0">System Info</h2>
+        </div>
+
+        <ul class="list-unstyled">
+          <li class="g-mb-5">
+            <i class="fa fa-angle-right g-mr-5"></i>
+            <a class="g-color-white-opacity-0_8">Node.js 12.* LTS</a>
+          </li>
+          <li class="g-mb-5">
+            <i class="fa fa-angle-right g-mr-5"></i>
+            <a class="g-color-white-opacity-0_8">AdonisJs 4.*</a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- End Footer Content -->
+    </div>
+  </div>
+
+  <!-- Copyright Footer -->
+  <div class="g-bg-black-opacity-0_1 g-color-white-opacity-0_8 text-center g-py-20">
+    <div class="container">
+      <small class="g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">© 2015 - 2018 cupOF Interests. All Rights Reserved.
+
+      </small>
+    </div>
+  </div>
+  <!-- End Copyright Footer -->
+</footer>
+<!-- End Footer -->
+
+    <a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+      <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+  </main>
+
+<script type="text/javascript" src="/testbundle.min.js"></script>
+<script type="text/javascript" src="/bundles/bundle.js"></script>
+
+</body>
+
+</html>
